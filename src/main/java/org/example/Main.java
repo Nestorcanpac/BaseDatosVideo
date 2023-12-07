@@ -29,7 +29,7 @@ public class Main {
             String consultaVideo= "Select * from Videojuegos";
             ResultSet resultado= sentencia.executeQuery(consultaVideo);
 
-            System.out.println("*****");
+            System.out.println("*********************MUESTRE INICIAL**********************");
 
             while (resultado.next()){
                 String id= resultado.getString("id");
