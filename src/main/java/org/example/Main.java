@@ -24,7 +24,7 @@ public class Main {
 
             Statement sentencia = conexion.createStatement();
             String sql = script.toString();
-            int resultadoQuery = sentencia.executeUpdate(sql);
+            sentencia.executeUpdate(sql);
 
             String consultaVideo= "Select * from Videojuegos";
             ResultSet resultado= sentencia.executeQuery(consultaVideo);
@@ -54,7 +54,7 @@ public class Main {
             preparedStatement.setDouble(4,8.34);
             preparedStatement.setString(5,"https://static.wikia.nocookie.net/borderlands/images/a/a3/Borderlands3.jpg/revision/latest?cb=20190404183924&path-prefix=es");
             preparedStatement.setInt(6,4);
-            int valor = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
 
 
 
@@ -77,7 +77,7 @@ public class Main {
 
             String delete="Delete from Videojuegos where titulo like 'Borderlands'";
             PreparedStatement sentenciaDelete= conexion.prepareStatement(delete);
-            int valorDelete= sentenciaDelete.executeUpdate();
+            sentenciaDelete.executeUpdate();
 
             Statement sentencia3= conexion.createStatement();
             String consulta3= "Select * from Videojuegos";
@@ -98,7 +98,7 @@ public class Main {
 
             String update= "Update Videojuegos set titulo='Borderlands 3' where id=3";
             PreparedStatement preparedStatementUpdate= conexion.prepareStatement(update);
-            int valorUpdate = preparedStatementUpdate.executeUpdate();
+            preparedStatementUpdate.executeUpdate();
 
             Statement sentencia4= conexion.createStatement();
             String consulta4= "Select * from Videojuegos";
